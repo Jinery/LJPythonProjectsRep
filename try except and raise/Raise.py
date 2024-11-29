@@ -3,13 +3,13 @@
 
 def divide(a, b):
     if b == 0:
-        raise ValueError("Деление на ноль недопустимо!") #Заменим наш ValueError на свою ошибку, в которой будет следующий текст: "Деление на ноль недопустимо!".
+        raise ZeroDivisionError("Деление на ноль недопустимо!") #Заменим наш ValueError на свою ошибку, в которой будет следующий текст: "Деление на ноль недопустимо!".
     return a / b
 
 try:
     result = divide(10, 0)
     print(result)
-except ValueError as e:
+except ZeroDivisionError as e:
     print(e)
 
 #Поскольку функции мы ещё не изучили, то по-быстрому объясню код.
